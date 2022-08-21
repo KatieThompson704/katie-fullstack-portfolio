@@ -168,7 +168,6 @@ a:visited {
 }
 
 #project2 ,#project3, #project4, #project5 {
-    border-radius: 2.5%;
     padding-left: 10px;
     min-height: 100%;
 }
