@@ -1,53 +1,51 @@
 
 :root{
-    --color1: hotpink;
+    --color1: rgb(226, 242, 247);
     --color2: lightblue;
     --color3: navy;
+    --color4: grey;
+    --color5: whitesmoke;
 }
 
 *{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 
 header, footer{
     display: flex;
-    background-color: aquamarine;
+    background-color:var(--color2);
     flex-direction: column;
     border-style:groove;
-    border-color:dodgerblue;
+    justify-content: center;
+    font-size: 300%;
+    color: var(--color4);
+    min-height: 400px;
 }
 
-header h1 {
-    justify-content:left;
-}
+
 
 header ul {
     display: flex;
-    justify-content: right;
+    justify-content:right;
 }
 
 header ul li {
     display: inline;
-    padding: 10px;
-    font-size: x-large;
-}
-
-a:active {
-    color:blueviolet
-}
-
-#subheading {
-    display:flex;
-    background: var(--color2);
-    height:fit-content
+    border: 10px;
+    font-size: 100%;
+    background-image: linear-gradient(to right,var(--color1), var(--color2));
+    border-color: var(--color4);
+    border-style: groove;
 }
 
 #profpic {
-    border: 1px solid #ddd;
-    border-radius: 10px;
+    border-radius: 25px;
     padding: 5px;
-    width: 150px;
+    width: 70%;
 }
 
 .content {
@@ -56,12 +54,11 @@ a:active {
     background-color: var(--color1);
     padding: 5px;
     margin: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
 .content > section {
-    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px 0;
-    font-size: 30px;
   }
 
 .about{
@@ -72,89 +69,115 @@ a:active {
 .titlel{
     width: 20%;
     flex-wrap: wrap;
-    background-color:bisque;
     border-color: var(--color3);
     border-right-style: solid;
     text-align: right;
     padding-right: 15px;
+    font-size: 300%;
 }
 
 #about-me-bio {
    display:flex;
-   background-color:antiquewhite;
    width: 60%;
    padding-left: 20px;
+   font-size: 50px;
 }
 
 .work{
     display:flex;
     width: 100%;
+    height: 2000px;
 }
 
-.workright{
+
+.work > h4 {
+    font-style: italic;
+}
+
+#workright{
     flex-wrap: wrap;
     flex-direction: row;
     width: 80%;
-    background-color: coral;
-
 }
 
 #project1{
-    background-color:green;
+    background-image: url("./images/project1.jpg");
     padding-left: 20px;
     margin-left: 10px;
-    margin-right: 20px;
     justify-items: center;
+    width: 80%;
+    font-size: 300%;
+    color: var(--color1);
+    min-height: 30%;
 }
 
 .container23, .container45 {
-    background-color:blueviolet;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-
+    font-size: 150%;
+    min-height: 30%;
 }
 
 
 .card{
     margin: 10px;
-    background-color: orange;
     width: 40%;
-    
-
+    text-align: bottom;
+    font-size: 150%;
+    color: var(--color5);
 }
 
  #project1:hover, #project2:hover,#project3:hover, #project4:hover, #project5:hover{
     opacity: 0.5;
-    background: teal;
+    color: var(--color5);
+}
+
+
+a:link{
+    color: var(--color3);
+    text-decoration: none;
+}
+a:visited {
+    color: purple;
+    text-decoration: none;
+}
+
+#project1, #project2 ,#project3, #project4, #project5 {
+    border-radius: 2.5%;
+}
+
+#project2 ,#project3, #project4, #project5 {
+    border-radius: 2.5%;
+    padding-left: 10px;
+    min-height: 100%;
 }
 
 #project2 {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    background-image: url("./images/project2.jpg");
 }
 
 #project3 {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 0, 255));
+    background-image: url("./images/project3.jpg");
 }
 
 #project4 {
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 26, 255));
+    background-image: url("./images/project4.jpg");
 }
 
 #project5{
-    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(0, 255, 76));
+    background-image: url("./images/project5.jpg");
 }
 
 
-.contactme {
+#contactme {
     display: flex;
 }
 
 .contact {
     display:flex;
     flex-direction: row;
-    background-color: rosybrown;
     width: 70%;
     justify-content: space-evenly;
     align-items: center;
@@ -162,12 +185,89 @@ a:active {
 
 .contact li {
     display: flex;
-    background-color: cyan;
     list-style: none;
     padding: 10px;
-    font-size: x-large;
+    font-size: 300%;
 }
 
 footer {
     text-align: center;
+}
+
+
+
+@media screen and (max-width: 600px) {
+   
+    header, footer {
+        justify-content:center;
+        align-items: center;
+        
+    }
+
+    header h1, footer h3 {
+        font-size: 40px;
+        
+    }
+    
+    header ul {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+    }
+    
+    header ul li {
+        border: 4px;
+        border-style: groove;
+        border-radius: 2%;
+        text-align: center;
+    }
+    #profpic {
+        width: 70%;
+       
+    }
+  
+    #about-me-bio {
+        font-size: 30px;
+    }
+
+    .work{
+        display:flex;
+        width: 100%;
+        height: 800px;
+    }
+
+    .titlel {
+        font-size: 18px;
+        padding-right:15px;
+    }
+    
+    #workright{
+        margin-right: 100px;
+    }
+
+    #project1{
+        width: 80%; 
+        font-size: 30px;
+    }
+
+    .card{
+        width: 80%;
+  }
+
+  .container23, .container45{
+    flex-direction: column;
+    min-height: auto;
+    width: auto;
+  }
+  #project2 ,#project3, #project4, #project5 {
+        margin-left: 10px;
+        border-radius: 2.5%;
+        padding-left: 10px;
+        min-height: 100px;
+        font-size: 20px;
+    }
+    #contactme .contact{
+        flex-direction: column;
+    }
+    
 }
