@@ -2,7 +2,7 @@
 
 ## Description
 
-*This web application serves as a portfolio of web applications I have built and deployed. 
+* This web application serves as a portfolio of web applications I have built and deployed. 
 
 
 ## Usage
